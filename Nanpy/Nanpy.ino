@@ -51,6 +51,10 @@
 #include <Adafruit_TLC5947.h>
 #endif
 
+#if USE_NeoPixel
+#include <Adafruit_NeoPixel.h>
+#endif
+
 
 #include "MCP41xxxClass.h"
 #include "BaseClass.h"
@@ -81,6 +85,9 @@
 #include "EspClass.h"
 #include "UltrasonicClass.h"
 #include "ColorSensorClass.h"
+
+#include "NeoPixelClass.h"
+
 
 using namespace nanpy;
 
@@ -120,6 +127,8 @@ void setup() {
     REGISTER_CLASS_CONDITIONAL(UltrasonicClass, USE_Ultrasonic);
     REGISTER_CLASS_CONDITIONAL(ColorSensorClass, USE_ColorSensor);
     
+    REGISTER_CLASS_CONDITIONAL(NeoPixelClass, USE_NeoPixel);
+
     ComChannel::connect();
 }
 
