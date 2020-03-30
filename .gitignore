@@ -11,7 +11,7 @@ build/
 */.lib
 
 #Configuration
-Nanpy/cfg.h
+# Nanpy/cfg.h
 makefile/
 
 #Internal dev
